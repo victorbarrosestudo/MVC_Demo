@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bolos</title>
+</head>
+<body>
+<h1>Lista de Bolos</h1>
+<hr>
+
+<table>
+  <thead>
+  <tr>
+    <th> Tipo</th>
+    <th> Recheio </th>
+    <th> Cobertura </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="bolo:${bolos}">
+    <td th:text="${bolo.tipo}">Tipo</td>
+    <td th:text="${bolo.recheio}">Recheio</td>
+    <td th:text="${bolo.cobertura}">Cobertura</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
